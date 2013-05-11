@@ -1,0 +1,1624 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (104.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20130510191655)
+  [4;35;1mSQL (78.0ms)[0m   [0mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `sku` varchar(255), `name` varchar(255), `brand` varchar(255), `price` varchar(255), `quantity` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20130510191655')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2013-05-11 03:28:57) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:29:03) [GET]
+  [4;36;1mProduct Load (16.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 2156ms (View: 2125, DB: 16) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-11 03:29:07) [GET]
+  [4;35;1mProduct Columns (47.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 94ms (View: 47, DB: 47) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:29:18) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/products.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:29:47) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:29:50) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/products.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:33:32) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:33:47) [POST]
+  Parameters: {"product"=>{"name"=>"d", "brand"=>"d", "price"=>"d", "quantity"=>"d", "sku"=>"d"}}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:01) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:01) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-11 03:34:06) [GET]
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 15ms (View: 7, DB: 3) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:34:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"TGqD0URVen7XtvRsJa6wmw1K1mSTicCmlVMpmE0NIKE=", "product"=>{"brand"=>"3", "name"=>"3", "price"=>"$3", "quantity"=>"3", "sku"=>"3"}}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (0.0ms)[0m   [0mINSERT INTO `products` (`name`, `brand`, `updated_at`, `price`, `quantity`, `sku`, `created_at`) VALUES('3', '3', '2013-05-11 03:34:15', '$3', '3', '3', '2013-05-11 03:34:15')[0m
+  [4;36;1mSQL (61.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 76ms (DB: 65) | 302 Found [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (5.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 32ms (View: 11, DB: 12) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 16ms (View: 4, DB: 7) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (6.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 26ms (View: 3, DB: 13) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (5.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 29ms (View: 7, DB: 12) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (4.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 60ms (View: 47, DB: 9) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 14ms (View: 3, DB: 5) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 15ms (View: 3, DB: 6) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (4.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 17ms (View: 4, DB: 9) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 15ms (View: 4, DB: 6) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (4.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 17ms (View: 4, DB: 8) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 21ms (View: 3, DB: 9) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (50.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 70ms (View: 4, DB: 57) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 15ms (View: 4, DB: 7) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 18ms (View: 3, DB: 7) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 18ms (View: 4, DB: 7) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 18ms (View: 4, DB: 7) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 18ms (View: 3, DB: 6) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:21) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 7, DB: 4) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:22) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 14ms (View: 6, DB: 4) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:22) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:22) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 8, DB: 5) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:23) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:23) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 28ms (View: 13, DB: 7) | 200 OK [http://localhost/products/]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-11 03:34:23) [GET]
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 4) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:34:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"TGqD0URVen7XtvRsJa6wmw1K1mSTicCmlVMpmE0NIKE=", "product"=>{"brand"=>"5", "name"=>"5", "price"=>"$5", "quantity"=>"5", "sku"=>"5"}}
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (1.0ms)[0m   [0;1mINSERT INTO `products` (`name`, `brand`, `updated_at`, `price`, `quantity`, `sku`, `created_at`) VALUES('5', '5', '2013-05-11 03:34:36', '$5', '5', '5', '2013-05-11 03:34:36')[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed in 74ms (DB: 64) | 302 Found [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:34:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 14ms (View: 3, DB: 6) | 200 OK [http://localhost/products/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:39) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 9, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:40) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:40) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:40) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:40) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 62ms (View: 52, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:41) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:49) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 11, DB: 5) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:50) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 10, DB: 6) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:50) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 27ms (View: 12, DB: 7) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:50) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 26ms (View: 11, DB: 7) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:51) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 11, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:51) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:51) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 11, DB: 5) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:51) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 9, DB: 8) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:52) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:52) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 10, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:52) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 9, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:34:52) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 31ms (View: 16, DB: 6) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:36:01) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (42.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 55ms (View: 8, DB: 43) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:36:03) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 5) | 200 OK [http://localhost/products/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:08) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:14) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 4, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:15) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 4, DB: 3) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:15) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 6, DB: 8) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:15) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 7, DB: 8) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:16) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 4, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:16) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 13ms (View: 5, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:16) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 14ms (View: 5, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:16) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 5, DB: 7) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:17) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 5, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:17) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 4, DB: 6) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:17) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 6, DB: 6) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:17) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 7, DB: 7) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:18) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 12ms (View: 4, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:18) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 13ms (View: 4, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:18) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 6, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:18) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 24ms (View: 7, DB: 7) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:19) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 10, DB: 7) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:19) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:19) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 5, DB: 4) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:36:19) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 12ms (View: 3, DB: 3) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:37:41) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 9, DB: 4) | 200 OK [http://localhost/products/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-11 03:38:23) [GET]
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 15ms (View: 6, DB: 3) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:38:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 13ms (View: 3, DB: 7) | 200 OK [http://localhost/products/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:41:49) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 12ms (View: 4, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:44:42) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 6, DB: 7) | 200 OK [http://localhost/products.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:44:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProduct Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (3.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 22ms (View: 3, DB: 10) | 200 OK [http://localhost/products/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:45:06) [POST]
+  Parameters: {"product"=>{"brand"=>"4", "name"=>"4", "price"=>"$4", "quantity"=>"4", "sku"=>"4"}}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:11) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:13) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:15) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:16) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:16) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 66ms (View: 51, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:17) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 10, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:17) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 29ms (View: 14, DB: 8) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:17) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:18) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:18) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 12, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:18) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:18) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:19) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:19) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 10, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:19) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:19) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:19) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:20) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:20) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 8, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:20) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:20) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 10, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:20) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 28ms (View: 14, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:21) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 26ms (View: 12, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:21) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:21) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:21) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:22) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:22) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 59ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:23) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:23) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:23) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 7, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:23) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:24) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:24) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:24) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 11, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:24) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 10, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:24) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:25) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:25) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 28ms (View: 12, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:25) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 10, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:25) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 10, DB: 8) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:26) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 7, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:26) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 28ms (View: 11, DB: 8) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:26) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 10, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:26) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:26) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 26ms (View: 11, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:27) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:27) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:27) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:27) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:28) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 16ms (View: 8, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:28) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:28) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 21ms (View: 10, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:28) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:28) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:29) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 7, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:29) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (22.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 42ms (View: 10, DB: 23) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:29) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 10, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:29) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 22ms (View: 9, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:30) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 11, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:30) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:30) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 62ms (View: 53, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:43) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 19ms (View: 8, DB: 4) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:43) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 17ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:44) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 9, DB: 7) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:44) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 20ms (View: 9, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:44) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 25ms (View: 10, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:44) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 29ms (View: 14, DB: 6) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:44) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 8, DB: 5) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2013-05-11 03:45:45) [GET]
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 6, DB: 3) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:45:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"TGqD0URVen7XtvRsJa6wmw1K1mSTicCmlVMpmE0NIKE=", "product"=>{"brand"=>"7", "name"=>"7", "price"=>"$7", "quantity"=>"7", "sku"=>"7"}}
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (0.0ms)[0m   [0;1mINSERT INTO `products` (`name`, `brand`, `updated_at`, `price`, `quantity`, `sku`, `created_at`) VALUES('7', '7', '2013-05-11 03:45:53', '$7', '7', '7', '2013-05-11 03:45:53')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/3
+Completed in 62ms (DB: 52) | 302 Found [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2013-05-11 03:45:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mProduct Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 3) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 17ms (View: 3, DB: 9) | 200 OK [http://localhost/products/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:57) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 10, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:58) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 63ms (View: 10, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:58) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 18ms (View: 10, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2013-05-11 03:45:59) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 23ms (View: 11, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index to json (for 127.0.0.1 at 2013-05-11 03:51:39) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+  [4;35;1mProduct Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 15ms (View: 5, DB: 5) | 200 OK [http://localhost/products.json]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2013-05-11 03:52:31) [POST]
+  Parameters: {"product"=>{"name"=>"8", "brand"=>"8", "price"=>"$8", "quantity"=>"8", "sku"=>"8"}}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (unprocessable_entity)
